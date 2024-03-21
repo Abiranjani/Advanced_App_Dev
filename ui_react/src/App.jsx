@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Register from './pages/Auth/Register'
 import Weblayout from './layouts/Weblayout'
 import Applyloan from './pages/Auth/Applyloan'
-import Appliedloan from './pages/Admin/Appliedloan'
+import Dashboard from './pages/Admin/Dashboard'
 
 
 
@@ -17,7 +17,7 @@ const App=()=> {
   return (
     <>
     <BrowserRouter>
-    <Suspense fallback='Loading..'>
+    <Suspense fallback='                   Loading..'>
     <Routes>
       <Route element={<Weblayout/>}>
         <Route path='/' element={<Home/>}/>
@@ -25,7 +25,8 @@ const App=()=> {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/application' element={<Applyloan/>}/>
-        <Route path='/' element={<Appliedloan/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
+        
       </Route>
     </Routes>
     </Suspense>

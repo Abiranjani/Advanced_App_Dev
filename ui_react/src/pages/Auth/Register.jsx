@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const RegisterPage = () => {
+const Register= () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -22,7 +23,7 @@ const RegisterPage = () => {
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
     } else {
-      // Validation and submission logic here
+      
       alert('Form submitted successfully');
     }
   };
@@ -75,13 +76,13 @@ const RegisterPage = () => {
           <button
             type="submit"
             className="w-full rounded-lg bg-blue-500 text-white py-2 px-4 hover:bg-blue-700"
-          >
-            Register
-          </button>
+            >
+            <Link to="/">Register</Link>
+            </button>
         </form>
       </div>
     </div>
   );
 };
 
-export default RegisterPage;
+export default Register;

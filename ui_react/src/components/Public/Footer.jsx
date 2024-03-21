@@ -1,11 +1,28 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-500 text-white text-center py-4">
-        <p>&copy; 2023 Agri Loan. All rights reserved.</p>
-      </footer>
+    <footer className="bg-gray-800 text-white p-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <p className="text-center">© 2024 Your Company. All rights reserved.</p>
+        <div className="flex space-x-4">
+          <a href="#" className="text-white">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
+          <a href="#" className="text-white">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="#" className="text-white">
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </a>
+          <a href="#" className="text-white">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 };
 
