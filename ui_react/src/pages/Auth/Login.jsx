@@ -1,36 +1,51 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 
-function Login() {
+const AgriLoanPage = () => {
   return (
+    <div className="flex flex-col min-h-screen bg-cover bg-center" style={{backgroundImage: 'url("https://source.unsplash.com/featured/?agriculture")'}}>
     
-<div>
-  <div class="relative py-3 sm:w-96 mx-auto text-center">
-    <span class="text-2xl text-black font-bold">Login to your account</span>
-    <div class="mt-4 bg-white shadow-md rounded-lg text-left">
-      
-      <div class="px-8 py-6 ">
-        <label class="block font-semibold"> Username or Email </label>
-        <input type="text" placeholder="Email" class="border w-full h-5 px-3 py-5 mt-2 focus:ring-1 rounded-md peer  border-green-green-200 outline outline-0border-t-transparent 
-            bg-transparent font-sans text-sm font-normal text-green-green-700  transition-all 
-            placeholder-shown:border placeholder-shown:border-green-green-200 placeholder-shown:border-t-green-green-200 
-            focus:border-2 focus:border-green-900 focus:border-t-transparent focus:!border-t-green-900 focus:outline-0 
-            disabled:border-0 disabled:bg-green-green-50"/>
-        <label class="block mt-3 font-semibold"> Username or Email </label>
-        <input type="password" placeholder="Password" class="border w-full h-5 px-3 py-5 mt-2 focus:ring-1 rounded-md peer  border-green-green-200 outline outline-0border-t-transparent 
-            bg-transparent font-sans text-sm font-normal text-green-green-700  transition-all 
-            placeholder-shown:border placeholder-shown:border-green-green-200 placeholder-shown:border-t-green-green-200 
-            focus:border-2 focus:border-green-900 focus:border-t-transparent focus:!border-t-green-900 focus:outline-0 
-            disabled:border-0 disabled:bg-green-green-50"/>
-          <div class="flex justify-between items-baseline">
-            <button type="submit" class="mt-4 bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-900 ">Login</button>
-            <a href="#" class="text-sm hover:underline">Forgot password?</a>
-          </div>
-      </div>
+      <main className="flex-1 flex items-center justify-center">
+        <div className="w-full md:w-1/2 lg:w-1/3 p-4 border border-gray-300 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">Login</h2>
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full border border-gray-300 p-2 rounded-lg text-sm"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                className="w-full border border-gray-300 p-2 rounded-lg text-sm"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600"
+            >
+              Sign In
+            </button>
+          </form>
+        </div>
+      </main>
+    
     </div>
- </div>
-</div>
-  )
-}
+  );
+};
 
-export default Login
+export default AgriLoanPage;

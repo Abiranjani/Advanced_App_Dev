@@ -25,6 +25,7 @@ const Navbar = () => {
     <>
         <div className='h-[10vh] w-screen flex flex-row justify-center items-center'>
             <div className='w-[80%] h-full flex flex-row justify-center items-center'>
+        
                 <div className='w-3/4'>
                     TailWindCss
                     </div>

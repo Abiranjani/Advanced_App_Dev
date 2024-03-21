@@ -5,6 +5,11 @@ import { Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Register from './pages/Auth/Register'
 import Weblayout from './layouts/Weblayout'
+import Applyloan from './pages/Auth/Applyloan'
+import Appliedloan from './pages/Admin/Appliedloan'
+
+
+
 import { Suspense } from 'react'
 const Contact=lazy(()=>import('./pages/Contact'))
 const Login=lazy(()=>import('./pages/Auth/Login'))
@@ -19,6 +24,8 @@ const App=()=> {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/application' element={<Applyloan/>}/>
+        <Route path='/' element={<Appliedloan/>}/>
       </Route>
     </Routes>
     </Suspense>
